@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>OBJECT</h1>
+    <div id="wrrap">
+      <input type="text" placeholder="enter a number">
+      <button>add number to array</button>
+      <button>print revers</button>
+      <p ></p>
+    </div>
+    
+</body>
+</html>
+<script>
+
+
+
+const numbers =[]
+const btn=document.querySelector("button:first-of-type")
+const input =document.querySelector("input")
+const print =document.querySelector("button:last-of-type")
+const para =document.querySelector("p")
+
+btn.onclick =()=>{
+  numbers.push(input.value)
+  console.log(numbers)
+}
+print.onclick=()=>{
+  let output=[]
+ for( let i=numbers.length-1;i>=0;i--){
+  let rev=""
+  for(let j=numbers[i].length-1;j>=0;j--){
+  rev=rev+numbers[i][j]
+ 
+  }
+  output.push(rev);
+  para.innerHTML=output
+ }
+ 
+  
+}
+
+
+
+
+
+
+
+// var user={
+//     uname:"priya",
+//     lname:"sharma",
+//     age:23,
+//     gender:"female"
+// }
+// console.log(user);
+// console.log(user.uname);
+
+
+// var user={
+//     uname:"priya",
+//     lname:"sharma",
+//     age:23,
+//     gender:"female",
+//     hobby:["dance","singing","cooking"]
+// }
+// console.log(user);
+// // console.log(user.uname);
+// console.log(user.hobby[1]);
+
+
+// // we can use function in  Object 
+
+
+
+// var user1={
+//     uname:"priya",
+//     lname:"sharma",
+//     age:23,
+//     gender:"female",
+//     hobby:["dance","singing","cooking"],
+//     salary:function(sal){
+//         return(sal)
+//     }
+
+// }
+// console.log(user1);
+// // console.log(user.uname);
+// // console.log(user.hobby[1]);
+// console.log(user1.salary(3000))
+
+
+// var user2={
+//     uname:"priya",
+//     lname:"sharma",
+//     age:23,
+//     gender:"female",
+//     hobby:["dance","singing","cooking"],
+//     student:(hindi,english,math)=>{
+//         return hindi+english+math;
+//     }
+
+// }
+// console.log(user2);
+// console.log(user2.student(80,70,50))
+
+
+
+
+
+// var user3={
+//     uname:"priya",
+//     lname:"sharma",
+//     age:23,
+//     gender:"female",
+//     uobj:{
+//         city:"jaipur",
+//         state:"rajasthan",
+//         country:"India"
+//     }
+// }
+// delete student.rollno
+// delete student.city
+// console.log(user3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// question----write a js program to delete the rollno and perperty from the following object 
+
+
+
+
+// let student={
+//     username:"kaushak",
+//     lstname:"jain",
+//     age:50,
+//     rollno:11,
+//     city:"jaipur"
+// };
+// console.log(student);
+// delete student.rollno
+// delete student.city;
+// console.log(student);
+// ------------------------------------------------------------
+
+
+
+// update object method 
+
+// let student={
+//     username:"kaushak",
+//     lstname:"jain",
+//     age:50,
+//     rollno:11,
+//     city:"jaipur"
+// };
+
+// console.log(student);
+// student.age=30;
+// student.city="ajmer";
+// console.log(student);
+// var a= student.username="priya"
+// console.log(student);
+
+
+
+// -----------------------------------------------------------------------
+
+
+// New Object method----------------
+
+
+// creating object method 
+// In array method we will assing object values later and we use new object mehod 
+
+
+
+
+// var obj1=new Object()
+// {
+//     obj1.uname="priya",
+//     obj1.ulast="sharma",
+//     obj1.age=23,
+//     obj1.gender="female"
+
+// };
+// console.log(obj1)
+
+
+// let arr1=[
+//     {
+//         uname:"priya",
+//         ulast:"shamra",
+//         age:23
+//     },
+//     {
+//         uname:"riya",
+//         ulast:"shamra",
+//         age:23
+//     },
+//     {
+//         uname:"aiya",
+//         ulast:"shamra",
+//         age:23
+//     },
+//     {
+//         uname:"siya",
+//         ulast:"shamra",
+//         age:23
+//     },
+//     {
+//         uname:"niya",
+//         ulast:"shamra",
+//         age:23
+//     },
+
+// ]
+// console.log(arr1);
+// console.log(arr1[2]);
+// console.log(arr1[2].age);
+
+
+
+// let obj={
+//         uname:"siya",
+//         ulast:"shamra",
+//         age:23,
+//         hobbies:["dancing","cooking","singing"],
+//         obj4:{
+//             uname:"priya",
+//             age:20,  
+//             fun:(hindi,eng,math)=>{
+//              return hindi+eng+math
+//              } 
+
+// }, 
+
+// }
+// console.log(obj);
+// console.log(obj.hobbies[2]);
+// console.log(obj.obj4.age);
+// console.log(obj.obj4.fun(20,30,40));
+
+
+
+
+// Object .keys() 
+// the object .keys() static method return as a array of a given object`s string-keyword property names 
+
+// let student={
+//     username:"kaushak",
+//     lstname:"jain",
+//     age:50,
+//     rollno:11,
+//     city:"jaipur"
+// };
+
+// console.log(student);
+// console.log(Object.keys(student));
+// console.log(Object.keys(student[1]));
+
+
+
+
+// let a={
+//     username:"kaushak",
+//     lstname:"jain",
+//     age:50,
+//     rollno:11,
+//     city:"jaipur"
+// };
+
+// console.log(a);
+// console.log(Object.values(a));
+// console.log(Object.values(a [0]));
+
+
+
+// Object FREEZE --------------------------------------------
+
+
+// THE OBJECT.freeze () statice method freeze an object .freeze an object  prevents extension 
+// and make existing property non writable and non-configruable .
+// a freeze object can no longer be change  
+
+
+// let student={
+//     username:"kaushak",
+//     lstname:"jain",
+//     age:50,
+//     rollno:11,
+//     city:"jaipur"
+// };
+// console.log(student);
+// Object.freeze(student);
+// // delete.student.age 
+// student.lstname="ajay";
+// console.log(student)
+
+
+
+// const arr=[12,6,55,34,99,11]
+
+
+// let largest = 0, 
+//     secondnumber = 0;
+// function mynumber(arr){
+//     for(i=0;i<arr.length;i++){
+//         if (arr[i] > largest) {
+//       secondnumber = largest;
+//       largest = arr[i];
+//     } 
+//     else if (arr[i] < largest && arr[i] > secondnumber) {
+//       secondnumber = arr[i];
+//     }
+   
+//     }
+//   }
+//   console.log(mynumber(arr))
+
+  
+
+
+
+
+
+
+
+
+// const numbers=[10,20,30,40,50]
+//     let largest = 0, 
+//     secondLargest = 0;
+//     for(let i=0; i<numbers.length;i++){
+
+        
+//     if(numbers[i]>largest){
+//         secondLargest = largest;
+//         largest = numbers[i];
+//     }
+//     else if(numbers[i]<largest && numbers[i]>secondLargest){
+//         secondLargest = numbers[i];
+//     }
+//     }
+//     if(secondLargest!==0){
+//     console.log({secondLargest});
+//     }
+//     else{
+//      console.log("Second largest element doesn't exist.");
+//         }
+
+// ----------------------------------------------------------------------------------
+// const num1=[3,4,5,6,7];
+// const num2=[1,2,3,4,5];
+
+// let Evennum11=[];
+// let Oddnum22=[];
+// for(i=0;i<num1.length;i++){
+//   if(i%2 === 0){
+//     Evennum11.push(num1[i]+num2[i])
+//   }
+//   else{
+//     Oddnum22.push(num1[i]+num2[i])
+//   }
+// }
+// console.log(Evennum11);
+// console.log(Oddnum22);
+
+
+
+
+
+
+
+
+</script>   
